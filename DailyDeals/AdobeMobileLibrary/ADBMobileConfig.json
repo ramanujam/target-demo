@@ -1,0 +1,75 @@
+{
+  "lastModified": "2015-08-11T21:33:42.463Z",
+  "target": {
+    "clientCode": "bullseyedemo",
+    "timeout": 5
+  },
+  "audienceManager": {
+    "server": ""
+  },
+  "acquisition": {
+    "server": "c00.adobe.com",
+    "appid": "7ba2990b8dc37e48e0430c593ed9d38ced1c20a2da15b0f6a2a665b7e8c4b694"
+  },
+  "analytics": {
+    "rsids": "a4tdeals.ios",
+    "server": "analytics4target.sc.omtrdc.net",
+    "ssl": true,
+    "offlineEnabled": true,
+    "charset": "UTF-8",
+    "lifecycleTimeout": 300,
+    "privacyDefault": "optedin",
+    "batchLimit": 0,
+    "timezone": "MDT",
+    "timezoneOffset": -360,
+    "referrerTimeout": 0,
+    "poi": [
+      [
+        "San Francisco",
+        37.7833,
+        -122.4167,
+        50000
+      ],
+      [
+        "New York",
+        40.7127,
+        -74.0059,
+        50000
+      ]
+    ]
+  },
+  "messages": [
+    {
+      "messageId": "0109fa91-f512-42e0-b8e9-46e54f805a9e",
+      "template": "alert",
+      "payload": {
+        "title": "Stay in the loop!",
+        "content": "Would you like to receive email updates for the latest and greatest deals?",
+        "confirm": "Yes",
+        "cancel": "No",
+        "url": ""
+      },
+      "showOffline": false,
+      "showRule": "always",
+      "endDate": 2524730400,
+      "startDate": 0,
+      "audiences": [],
+      "triggers": [
+        {
+          "key": "a.LaunchEvent",
+          "matches": "ex",
+          "values": null
+        },
+        {
+          "key": "a.InstallEvent",
+          "matches": "ex",
+          "values": null
+        }
+      ]
+    }
+  ],
+  "remotes": {
+    "analytics.poi": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-55b01fa735646100170003c2.json",
+    "messages": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-55b01fa43066371f4600036f.json"
+  }
+}
