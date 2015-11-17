@@ -131,8 +131,8 @@
 -(void)welcomeMessageCampaign
 {
     
-    //  Passing custom parameters for targeting. In this example, the parameters are hardcoded but typically variables should
-    //  be used for sending custom profile information.
+    //  Passing custom parameters for targeting. In this example, the parameters are
+    //  hardcoded but typically variables should be used for sending custom profile information.
     
     NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
                                   @"true", @"loyaltyAccount",
@@ -140,7 +140,8 @@
                                   @"prod",@"host",
                                   @"fashion",@"entity.categoryId", nil];  //nil to signify end of objects and keys.
     
-    //  Create and load target request. Here "welcome-message" is the name of the location. This shows up in the dropdown in the UI.
+    //  Create and load target request. Here "welcome-message" is the name of the location.
+    //  This shows up in the dropdown in the UI.
     ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"welcome-message"
                                                                         defaultContent:@"Welcome new user!"
                                                                             parameters:targetParams];
