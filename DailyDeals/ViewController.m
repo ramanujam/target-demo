@@ -143,8 +143,8 @@
     //  Create and load target request. Here "welcome-message" is the name of the location.
     //  This shows up in the dropdown in the UI.
     ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"welcome-message"
-                                                                        defaultContent:@"Welcome new user!"
-                                                                            parameters:targetParams];
+                                                           defaultContent:@"Welcome new user!"
+                                                           parameters:targetParams];
     
     [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content)
      
@@ -196,7 +196,9 @@
 
 -(void) makeMboxConfirm
 {
-    
+    // Resets the user state. This is used here for demo purposes.
+    [ADBMobile targetClearCookies];
+
     ADBTargetLocationRequest* orderConfirm = [ADBMobile targetCreateOrderConfirmRequestWithName:@"signed-up" orderId:@"order" orderTotal:@"2.00" productPurchasedId:nil parameters:nil];
     [ADBMobile targetLoadRequest:orderConfirm callback:nil];
     
