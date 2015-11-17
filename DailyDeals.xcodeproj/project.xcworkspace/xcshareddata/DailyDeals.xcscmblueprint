@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "76870BD1C38D85552028F6B381DA4C3D28BCAFC3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "76870BD1C38D85552028F6B381DA4C3D28BCAFC3" : 0,
+    "94F32C87426D6661FAA3FD6271526B39EA5E99D9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "40F9006B-0309-4986-BD23-E4DDDDCD0E7F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "76870BD1C38D85552028F6B381DA4C3D28BCAFC3" : "targetdemo\/",
+    "94F32C87426D6661FAA3FD6271526B39EA5E99D9" : "deals-Final2"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DailyDeals",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DailyDeals.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ramanujam\/target-demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "76870BD1C38D85552028F6B381DA4C3D28BCAFC3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ArrayOG\/deals-Final2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "94F32C87426D6661FAA3FD6271526B39EA5E99D9"
+    }
+  ]
+}

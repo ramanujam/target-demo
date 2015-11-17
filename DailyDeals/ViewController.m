@@ -25,10 +25,10 @@
     [self makeMboxConfirm];
     
     /* UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Daily Deals" message:@"Please take a moment to rate our app!" delegate:self cancelButtonTitle:@"Not now, remind me later" otherButtonTitles:nil];
-    // optional - add more buttons:
-    [alert addButtonWithTitle:@"Yes, I'll rate you now"];
-    [alert addButtonWithTitle:@"No, thanks"];
-    [alert show];*/
+     // optional - add more buttons:
+     [alert addButtonWithTitle:@"Yes, I'll rate you now"];
+     [alert addButtonWithTitle:@"No, thanks"];
+     [alert show];*/
     
     // Do any additional setup after loading the view, typically from a nib.
     //Hide navigation bar and set scrollview contentSize
@@ -39,7 +39,7 @@
     _btnTwitter.hidden = YES;
     
     [self socialLoginCampaign];
-    [self makeMboxConfirm]; 
+    [self makeMboxConfirm];
     
     
 }
@@ -126,14 +126,31 @@
     self.welcomeMessage.numberOfLines = 0;
 }
 
+
+
 -(void)welcomeMessageCampaign
 {
-    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"welcome-message" defaultContent:@"Welcome new user!" parameters:nil];
-
+    
+    //  Passing custom parameters for targeting. In this example, the parameters are hardcoded but typically variables should
+    //  be used for sending custom profile information.
+    
+    NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                  @"true", @"loyaltyAccount",
+                                  @"platinum", @"memberLevel",
+                                  @"prod",@"host",
+                                  @"fashion",@"entity.categoryId", nil];  //nil to signify end of objects and keys.
+    
+    //  Create and load target request. Here "welcome-message" is the name of the location. This shows up in the dropdown in the UI.
+    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"welcome-message"
+                                                                        defaultContent:@"Welcome new user!"
+                                                                            parameters:targetParams];
+    
     [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content)
      
      {
          NSLog(@"Response from Target --- %@", content);
+         
+         //It is typically a bad practice to run on the main thread!
          [self performSelectorOnMainThread:@selector(welcomeMessageCampaignChanges:) withObject:content waitUntilDone:NO];
          
      }];
@@ -142,7 +159,7 @@
 
 -(void)socialLoginCampaignChanges: (NSString*) content
 {
-//    NSLog(@"Response from Target --- %@", content);
+    //    NSLog(@"Response from Target --- %@", content);
     if ([content isEqualToString:@"fb"])
     {
         _btnFacebook.hidden = NO;
@@ -169,17 +186,17 @@
      {
          [self performSelectorOnMainThread:@selector(socialLoginCampaignChanges:) withObject:content waitUntilDone:NO];
      }
-    ];
+     ];
     
     
 }
 
+//Send a conversion event with orderTotal
+
 -(void) makeMboxConfirm
 {
-    [ADBMobile targetClearCookies];
     
     ADBTargetLocationRequest* orderConfirm = [ADBMobile targetCreateOrderConfirmRequestWithName:@"signed-up" orderId:@"order" orderTotal:@"2.00" productPurchasedId:nil parameters:nil];
-    
     [ADBMobile targetLoadRequest:orderConfirm callback:nil];
     
 }
