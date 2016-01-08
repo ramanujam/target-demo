@@ -134,22 +134,21 @@
     //  Passing custom parameters for targeting. In this example, the parameters are
     //  hardcoded but typically variables should be used for sending custom profile information.
     
-    NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                  @"true", @"loyaltyAccount",
-                                  @"platinum", @"memberLevel",
-                                  @"prod",@"host",
-                                  @"fashion",@"entity.categoryId", nil];  //nil to signify end of objects and keys.
+//    NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys:
+//                                  @"true", @"loyaltyAccount",
+//                                  @"platinum", @"memberLevel",
+//                                  @"prod",@"host",
+//                                  @"yes", "@huddle",
+//                                  @"fashion",@"entity.categoryId", nil];  //nil to signify end of objects and keys.
     
     //  Create and load target request. Here "welcome-message" is the name of the location.
     //  This shows up in the dropdown in the UI.
-    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"welcome-message"
-                                                           defaultContent:@"Welcome new user!"
-                                                           parameters:targetParams];
-    
-    [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content)
-     
-     {
-         NSLog(@"Response from Target --- %@", content);
+
+    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"new-welcome-message"                                              defaultContent:@"Hello there!" parameters:nil];
+
+    [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content){
+        
+        NSLog(@"Response from Target --- %@", content);
          
          //It is typically a bad practice to run on the main thread!
          [self performSelectorOnMainThread:@selector(welcomeMessageCampaignChanges:) withObject:content waitUntilDone:NO];
@@ -160,7 +159,7 @@
 
 -(void)socialLoginCampaignChanges: (NSString*) content
 {
-    //    NSLog(@"Response from Target --- %@", content);
+    NSLog(@"Response from Target (social-signup) --- %@", content);
     if ([content isEqualToString:@"fb"])
     {
         _btnFacebook.hidden = NO;
@@ -181,7 +180,7 @@
 -(void)socialLoginCampaign
 {
     
-    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"social-signup" defaultContent:@"Default Message" parameters:nil];
+    ADBTargetLocationRequest* locationRequest = [ADBMobile targetCreateRequestWithName:@"social-signup" defaultContent:@"Return this when inactive" parameters:nil];
     [ADBMobile targetLoadRequest:locationRequest callback:^(NSString *content)
      
      {

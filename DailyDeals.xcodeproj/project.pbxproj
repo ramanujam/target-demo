@@ -11,8 +11,6 @@
 		13EA0BBD1B728963002F99DD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EA0BBC1B728963002F99DD /* SystemConfiguration.framework */; };
 		13EA0BBF1B72896B002F99DD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EA0BBE1B72896B002F99DD /* CoreLocation.framework */; };
 		13EA0BC11B72897A002F99DD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EA0BC01B72897A002F99DD /* libz.dylib */; };
-		36DC988A1BFBBBB500A04B7E /* coachella.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DC98891BFBBBB500A04B7E /* coachella.png */; settings = {ASSET_TAGS = (); }; };
-		36DC988C1BFBBBCA00A04B7E /* halfmoonbay.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 36DC988B1BFBBBCA00A04B7E /* halfmoonbay.jpeg */; settings = {ASSET_TAGS = (); }; };
 		8E3B303818F3C62100DEC655 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B302818F3C62100DEC655 /* Arrow.png */; };
 		8E3B303918F3C62100DEC655 /* Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B302918F3C62100DEC655 /* Arrow@2x.png */; };
 		8E3B303A18F3C62100DEC655 /* boxWithGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B302A18F3C62100DEC655 /* boxWithGray.png */; };
@@ -700,12 +698,10 @@
 				8EEF9F8A18F3F6610022E7BB /* backArrow.png in Resources */,
 				8EC035A118F2B93100946BA8 /* Icon-Twitter@2x.png in Resources */,
 				A0D024281B7C3CE3002CB3BA /* twitterflat.png in Resources */,
-				36DC988A1BFBBBB500A04B7E /* coachella.png in Resources */,
 				8E3B304718F3C62100DEC655 /* on@2x.png in Resources */,
 				A0D0242A1B7C3FCD002CB3BA /* dailydealogo.png in Resources */,
 				8EEF9FA218F4025F0022E7BB /* purchaseButtom@2x.png in Resources */,
 				A01689791B73F5F000E322CA /* seattle.jpg in Resources */,
-				36DC988C1BFBBBCA00A04B7E /* halfmoonbay.jpeg in Resources */,
 				8E3B303E18F3C62100DEC655 /* btnEdit.png in Resources */,
 				8EEF9F9F18F4025F0022E7BB /* cellDivider.png in Resources */,
 				8EEF9F8E18F3F6610022E7BB /* buttomBuyStrip.png in Resources */,
